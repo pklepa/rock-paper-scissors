@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rock, Paper, Scissors</title>
+
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
 </head>
 
 <body>
     <header>
         <h1>Rock, Paper or Scissors?</h1>
         <div>
-            <a href="#">About</a>
-            <a href="#">Help</a>
+            <a id='about' href="#">About</a>
+            <a id='help' href="#">Help</a>
         </div>
     </header>
     <main>
@@ -61,6 +64,18 @@
 
         </div>
     </main>
+
+    <div class="hide" id="modal">
+        <div class="content">
+            <div class="header">
+                <h1></h1>
+                <a href="#">Close</a>
+            </div>
+            <div class="body">
+                <p></p>            
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>

@@ -79,6 +79,38 @@ function random(maxVal){
     return Math.floor(Math.random() * maxVal);
 }
 
+
+function handleAboutClick(){
+    modal.classList.remove('hide');
+
+    modalTitle.textContent = 'About';
+
+    let modalBodyText = `<p>This web page was made by pklepa as an early learning experience in web development.<br>
+        <br>
+        You can see more of my work at <a style='font-weight: bold; color: white' href="https://github.com/pklepa">https://github.com/pklepa</a></p>`;
+    modalBody.innerHTML = modalBodyText;
+}
+
+
+function handleHelpClick(){
+    modal.classList.remove('hide');
+
+    modalTitle.textContent = 'Help'
+
+    let modalBodyText = `<p>Rock, Papers, Scissors is an ancient game in which you can play (as the name implies) one of three moves:</p>
+    <ul>Rock</ul><ul>Paper</ul><ul>Scissors</ul>
+    <br>
+    <p>The rules for the game are simple:<br></p>
+    <ul>Rock beats Scissors</ul><ul>Scissors beats Paper</ul><ul>Paper beats Rock</ul>
+    <br>
+    <p>It is a zero-sum game in which the possible outcomes are either a win, a draw or a win for the other player.<br>
+    <br>
+    That's it! Have fun!    
+    </p>`;
+    modalBody.innerHTML = modalBodyText;
+}
+
+
 function handleSelectedItem(event){
     const playObject = event.target;
     const playStr = playObject.dataset.name;
@@ -124,16 +156,14 @@ function handleSelectedItem(event){
 
 // ..:: MAIN SCRIPT ::..
 
-// Event Listeners
-const plays = document.querySelectorAll('.card');
-for (const play of plays) {
-    play.addEventListener("click", handleSelectedItem);
-}
-
-
 // Global Variables
 let playerScore = 0;
 let computerScore = 0;
+
+const modal = document.querySelector('#modal');
+let modalTitle = document.querySelector('#modal h1');
+// let modalBody = document.querySelector('#modal p');
+let modalBody = document.querySelector('#modal .body');
 
 const playerScoreHTML = document.querySelector('#yourScore');
 const computerScoreHTML = document.querySelector('#myScore');
@@ -142,3 +172,21 @@ const playerPlay = document.querySelector('#yourPlay');
 const computerPlay = document.querySelector('#myPlay')
 
 const roundResult = document.querySelector('#roundResult');
+
+
+// Event Listeners
+const plays = document.querySelectorAll('.card');
+for (const play of plays) {
+    play.addEventListener("click", handleSelectedItem);
+}
+
+const about = document.querySelector('#about');
+about.addEventListener('click', handleAboutClick);
+
+const help = document.querySelector('#help');
+help.addEventListener('click', handleHelpClick);
+
+const modalCloseBtn = document.querySelector('#modal a');
+modalCloseBtn.addEventListener('click', () => {
+    modal.classList.add('hide');
+})
