@@ -107,6 +107,8 @@ function handleSelectedItem(event){
     const playObject = event.target;
     const playStr = playObject.dataset.name;
 
+    console.log(playObject);
+
     let roundResultMessageArr = ['That\'s a draw.', 'Ouch! You lost.', 'Noice! You won.'];
     let result = playRound(playStr, computerRoundPlay());
 
