@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -10,14 +11,53 @@
 <body>
     <header>
         <h1>Rock, Paper or Scissors?</h1>
-        <a href="#">About</a>
-        <a href="#">Help</a>
+        <div>
+            <a href="#">About</a>
+            <a href="#">Help</a>
+        </div>
     </header>
     <main>
-        <div class="container">
-            <a id="rock" href="#">Rock</a>
-            <a id="paper" href="#">Paper</a>
-            <a id="scissors" href="#">Scissors</a>
+        <div class="intro">
+            <p>Ah, here you are.<br>
+            See, this is a simple RPS game in which you play against <strong>me!</strong><br>
+            I'll be counting the rounds and the <strong>first one to 5</strong>, takes it all.<br>
+            Choose your weapon, try and take me down. </p>
+
+            <div class="scoreboard">
+                <div class="you">
+                    <strong>y o u</strong>
+                    <p id="yourScore" class="score">0</p>
+
+                    <p id="yourPlay" class="roundPlay"></p>
+                </div>
+
+                <div class="me">
+                    <strong>m e</strong>
+                    <p id="myScore" class="score">0</p>
+
+                    <p id="myPlay" class="roundPlay"></p>
+                </div>
+            </div>
+
+            <p id="roundResult">teste</p>
+
+        </div>
+        <div class="cards">
+            <ul class="card">
+                <img data-name="Rock" src="/assets/rock.png" alt="Rock">
+                <p data-name="Rock">Rock</p>
+            </ul>
+
+            <ul class="card">
+                <img data-name="Paper" src="/assets/paper.png" alt="Paper">
+                <p data-name="Paper">Paper</p>
+            </ul>
+
+            <ul class="card">
+                <img data-name="Scissors" src="/assets/scissors.png" alt="Scissors">
+                <p data-name="Scissors">Scissors</p>
+            </ul>
+
         </div>
     </main>
 
