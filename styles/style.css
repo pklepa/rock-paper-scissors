@@ -10,6 +10,8 @@ a {
 body {
     font-family: monospace;
     background-color: white;
+
+    min-height: 1000px;
 }
 
 
@@ -60,13 +62,15 @@ main .intro strong {
 }
 
 main .intro .scoreboard {
-    margin-top: 40px;
+    margin-top: 20px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     font-size: 24px;
+
+    transition: 1s;
 }
 
 main .intro .scoreboard strong {
@@ -88,6 +92,9 @@ main .intro .scoreboard .me {
 main .intro .scoreboard .roundPlay {
     margin-top: 20px;
     font-size: 16px;
+
+    border: 1px dashed #c1c1c9;
+    border-radius: 8px;
 }
 
 
@@ -106,7 +113,6 @@ main .cards .card {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    list-style-type: none;
 
     transition-duration: 300ms;
 
@@ -121,6 +127,9 @@ main .cards .card:hover {
 main .cards .card img {
     border-radius: 8px;
     border: 5px solid #ffeb00;
+
+    width: 250px;
+    height: 250px;
 }
 
 main .cards .card p {

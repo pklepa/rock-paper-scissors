@@ -1,27 +1,3 @@
-// function play(playerSelection){
-//     let roundResultMessageArr = ['That\'s a draw.', 'Ouch! You lost.', 'Noice! You won.'];
-//     let result = playRound(playerSelection, computerRoundPlay());
-
-//     switch(result) {
-//         case 'Draw':
-//             console.log('%c '+roundResultMessageArr[0], 'color: #f7bd2a');
-//             break;
-//         case 'PC':
-//             console.log('%c '+roundResultMessageArr[1], 'color: red');
-//             computerScore++
-//             break;
-//         case 'Player':
-//             console.log('%c '+roundResultMessageArr[2], 'color: green');
-//             playerScore++
-//             break;
-//         default:
-//             console.warn('Something went wrong..');
-//     }
-
-//     console.log('----------------------');
-//     return result
-// }
-
 // function game(){
 //     console.log('RPS Best of 5 - First to win 3 rounds is the winner.\n..:: Game\'s on! ::..');
 //     let playerScore = 0;
