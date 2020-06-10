@@ -144,6 +144,12 @@ function handleSelectedItem(event){
 
     console.log('----------------------');
 
+    if (playerScore == 5 || computerScore == 5){
+        gameOver();
+        playerScore = 0;
+        computerScore = 0
+    }
+
 
     // Updates Scoreboard
     playerScoreHTML.textContent = playerScore;
@@ -151,6 +157,35 @@ function handleSelectedItem(event){
 
 }
 
+function gameOver(){
+    modal.classList.remove('hide');
+    modalTitle.textContent = 'Game Over!';
+
+    let modalBodyText = `
+            <h2>Final Score</h2>
+            <div class="finalScore">
+                <li>you</li>
+                <li>me</li>
+                <li>${playerScore}</li>
+                <li>${computerScore}</li>            
+            </div>
+            `;
+    modalBody.innerHTML = modalBodyText;
+
+    if(playerScore > computerScore) {
+        modalBody.innerHTML += `
+            <p>Hah, as if this mattered anything...<br>
+            <br>
+            You better know that this only happened because I let you, not because you deserved it.</p>
+        `;
+    } else {
+        modalBody.innerHTML += `
+            <p>What? Don't act surprised.<br>
+            <br>
+            Of course you lost. This is the 21st century, robots will best you in everything.</p>
+        `;
+    }
+}
 
 
 
@@ -161,7 +196,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 const modal = document.querySelector('#modal');
-let modalTitle = document.querySelector('#modal h1');
+let modalTitle = document.querySelector('#modal .header h1');
 // let modalBody = document.querySelector('#modal p');
 let modalBody = document.querySelector('#modal .body');
 
