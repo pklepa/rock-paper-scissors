@@ -174,13 +174,13 @@ function gameOver(){
 
     if(playerScore > computerScore) {
         modalBody.innerHTML += `
-            <p>Hah, as if this mattered anything...<br>
+            <p style="margin-top: 40px">Hah, as if this mattered anything...<br>
             <br>
             You better know that this only happened because I let you, not because you deserved it.</p>
         `;
     } else {
         modalBody.innerHTML += `
-            <p>What? Don't act surprised.<br>
+            <p style="margin-top: 40px">What? Don't act surprised.<br>
             <br>
             Of course you lost. This is the 21st century, robots will best you in everything.</p>
         `;
